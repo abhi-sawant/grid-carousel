@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 250px 1fr;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    max-width: 0;
+    grid-area: 1 / 1;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+.active {
+    max-width: 100%;
+    transition: all 0.5s;
+}
+
+.buttons button {
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0.5em 1.5em;
+    margin: 1em 2em;
+    border-radius: 5px;
+}
